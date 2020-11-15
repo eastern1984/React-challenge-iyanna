@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, makeStyles} from "@material-ui/core";
+import {Card, Grid, makeStyles} from "@material-ui/core";
 import ActivityFilter from "./ActivityFilter";
 import ActivityCard from "./ActivityCard";
 
@@ -15,10 +15,15 @@ interface ActivityProps {
 
 const Activity: React.FC<ActivityProps> = props => {
     const classes = useStyles();
-    return (<>
-            <ActivityFilter />
-            <ActivityCard />
-        </>
+    return (
+        <Grid container spacing={2} direction={"column"}>
+            <Grid item>
+                <ActivityFilter />
+            </Grid>
+            <Grid item>
+                <ActivityCard />
+            </Grid>
+        </Grid>
     );
 };
 

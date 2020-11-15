@@ -7,8 +7,11 @@ import StrongBuys from "./StrongBuys/StrongBuys";
 import Activity from "./ActivityTimeline/Activity";
 
 const useStyles = makeStyles({
-    title: {
-        textAlign: "center",
+    main: {
+        margin: "70px 0 0 80px",
+    },
+    mainContainer: {
+        margin: "auto",
     },
 });
 
@@ -19,17 +22,33 @@ interface MainProps {
 const Main: React.FC<MainProps> = props => {
     const classes = useStyles();
     return (
-            <Grid container spacing={2}>
+        <div className={classes.main}>
+            <Grid container spacing={2} justify="center">
                 <Grid item xs={6}>
-                    <TrendingTitans />
-                    <StrongBuys />
-                    <Activity />
+                    <Grid container spacing={2} direction={"column"}>
+                        <Grid item>
+                            <TrendingTitans />
+                        </Grid>
+                        <Grid item>
+                            <StrongBuys />
+                        </Grid>
+                        <Grid item>
+                            <Activity />
+                        </Grid>
+                    </Grid>
                 </Grid>
                 <Grid item xs={3}>
-                    <TopStocks />
-                    <TopRatings />
+                    <Grid container spacing={2} direction={"column"}>
+                        <Grid item>
+                            <TopStocks />
+                        </Grid>
+                        <Grid item>
+                            <TopRatings />
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Grid>
+        </div>
     );
 };
 

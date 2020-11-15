@@ -1,9 +1,9 @@
 import React from 'react';
-import {makeStyles} from "@material-ui/core";
+import {Card, makeStyles} from "@material-ui/core";
 
 const useStyles = makeStyles({
-    title: {
-        textAlign: "center",
+    card: {
+        height: 450,
     },
 });
 
@@ -13,9 +13,9 @@ interface TopRatingsProps {
 
 const TopRatings: React.FC<TopRatingsProps> = props => {
     const classes = useStyles();
-    return (<>
+    return (<Card className={classes.card}>
 
-        </>
+        </Card>
     );
 };
 

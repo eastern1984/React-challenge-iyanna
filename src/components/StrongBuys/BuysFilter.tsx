@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles} from "@material-ui/core";
+import {makeStyles, MenuItem, Select} from "@material-ui/core";
 
 const useStyles = makeStyles({
     title: {
@@ -13,9 +13,10 @@ interface BuysFilterProps {
 
 const BuysFilter: React.FC<BuysFilterProps> = props => {
     const classes = useStyles();
-    return (<>
-
-        </>
+    return (
+        <Select value={"Strong buys"} disableUnderline>
+            <MenuItem value={"Strong buys"}><b>Strong buys</b></MenuItem>
+        </Select>
     );
 };
 

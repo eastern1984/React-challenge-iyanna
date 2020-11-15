@@ -1,5 +1,7 @@
 import React from 'react';
-import {Card, makeStyles} from "@material-ui/core";
+import {Card, Grid, makeStyles} from "@material-ui/core";
+import BuysFilter from "./BuysFilter";
+import StrongBuysCard from "./StrongBuysCard";
 
 const useStyles = makeStyles({
     title: {
@@ -13,9 +15,15 @@ interface StrongBuysProps {
 
 const StrongBuys: React.FC<StrongBuysProps> = props => {
     const classes = useStyles();
-    return (<Card>
-
-        </Card>
+    return (
+        <Grid container spacing={2} direction={"column"}>
+            <Grid item>
+                <BuysFilter />
+            </Grid>
+            <Grid item>
+                <StrongBuysCard />
+            </Grid>
+        </Grid>
     );
 };
 

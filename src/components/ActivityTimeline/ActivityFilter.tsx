@@ -1,9 +1,9 @@
 import React from 'react';
-import {makeStyles} from "@material-ui/core";
+import {makeStyles, MenuItem, Select} from "@material-ui/core";
 
 const useStyles = makeStyles({
-    title: {
-        textAlign: "center",
+    select: {
+        color: 'grey'
     },
 });
 
@@ -13,8 +13,12 @@ interface ActivityFilterProps {
 
 const ActivityFilter: React.FC<ActivityFilterProps> = props => {
     const classes = useStyles();
-    return (<>
-
+    return (
+        <>
+            <span><b>Activity Timeline - </b></span>
+            <Select value={"General"} className={classes.select} disableUnderline>
+                <MenuItem value={"General"}><b>General</b></MenuItem>
+            </Select>
         </>
     );
 };
