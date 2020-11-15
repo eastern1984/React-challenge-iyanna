@@ -7,11 +7,11 @@ const useStyles = makeStyles({
     },
 });
 
-interface TopStocksProps {
+interface StrongBuysProps {
 
 }
 
-const TopStocks: React.FC<TopStocksProps> = props => {
+const StrongBuys: React.FC<StrongBuysProps> = props => {
     const classes = useStyles();
     return (<Card>
 
@@ -19,4 +19,4 @@ const TopStocks: React.FC<TopStocksProps> = props => {
     );
 };
 
-export default TopStocks;
+export default StrongBuys;
