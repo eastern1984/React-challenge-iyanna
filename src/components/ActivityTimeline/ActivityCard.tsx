@@ -51,7 +51,7 @@ const useStyles = makeStyles({
         fontSize: '0.8rem'
     },
     text: {
-        fontSize: '0.8rem'
+        fontSize: '0.7rem'
     },
 });
 
@@ -68,7 +68,7 @@ const ActivityCard: React.FC<ActivityCardProps> = props => {
                     <Card className={data.type === NEWS ? classes.big_card : classes.small_card}>
                         <div  className={classes.content}>
                             <div className={data.type === NEWS ? classes.image : classes.icon}>
-                                <img className={classes.image} src="/static/images/avatar/1.jpg" />
+                                <img alt='' className={classes.image} src="/static/images/avatar/1.jpg" />
                             </div>
                             <div className={classes.data}>
                                 <p className={classes.title}><b>{data.title}</b></p>
